@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+     <script src="js/auth.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                 
+            <!-- Mobile navigation menu -->
+            <div class="mobile-nav">
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#products">Explore</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="auth.html">Admin</a></li>
+                </ul>
+            </div>
+       
+            <!--desktop-->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#products">Explore</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="auth.html">Admin</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="What are you looking for?">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="nav-icons">
+                <a href="wishlist.html" class="wishlist">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="checkout.html" class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="auth.html" class="wishlist">
+                    <i class="far fa-user"></i>
+                </a>
+                <!-- Add hamburger menu button -->
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="wishlist-container">
+        <div class="wishlist-header">
+            <h1>My Wishlist</h1>
+            <p>Manage your favorite items</p>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+
+        <div class="empty-wishlist" style="display: none;">
+            <i class="fas fa-heart"></i>
+            <h2>Your wishlist is empty</h2>
+            <p>Browse our products and add your favorites to the wishlist!</p>
+            <a href="products.html" class="browse-products">Browse Products</a>
+        </div>
+    </main>
+
+    <script src="js/wishlist.js"></script>
+</body>
+</html>

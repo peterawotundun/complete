@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login / Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f6f7fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .auth-container {
+            background: #fff;
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 32px rgba(0,0,0,0.08);
+            width: 350px;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 8px 0;
+            cursor: pointer;
+            font-weight: bold;
+            color: #888;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .tab.active {
+            color: #043D79;
+            border-bottom: 2px solid #043D79;
+        }
+        form {
+            display: none;
+            flex-direction: column;
+        }
+        form.active {
+            display: flex;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            padding: 0.7em 0;
+            border: none;
+            background: #043D79;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-bottom: 8px;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #174ea6;
+        }
+        .msg {
+            margin-bottom: 12px;
+            font-size: 0.98em;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        .msg.error {
+            background: #ffe5e5;
+            color: #b30000;
+        }
+        .msg.success {
+            background: #e6ffe5;
+            color: #043D79;
+        }
+    </style>
+</head>
+<body>
+<div class="auth-container">
+    <div class="tabs">
+        <div class="tab active" id="loginTab">Login</div>
+        <div class="tab" id="registerTab">Register</div>
+    </div>
+    <form id="loginForm" class="active" autocomplete="on">
+        <div id="loginMsg" class="msg" style="display:none"></div>
+        <input type="email" id="loginEmail" placeholder="Email" autocomplete="username" required>
+        <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
+        <button type="submit">Login</button>
+    </form>
+    <form id="registerForm" autocomplete="on">
+        <div id="registerMsg" class="msg" style="display:none"></div>
+        <input type="text" id="registerName" placeholder="Full Name" required>
+        <input type="email" id="registerEmail" placeholder="Email" autocomplete="username" required>
+        <input type="password" id="registerPassword" placeholder="Password" autocomplete="new-password" required>
+        <button type="submit">Register</button>
+    </form>
+</div>
+<script src="js/auth.js"></script>
+<script>
+    // Tab switching logic
+    const loginTab = document.getElementById('loginTab');
+    const registerTab = document.getElementById('registerTab');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+
+    loginTab.onclick = function() {
+        loginTab.classList.add('active');
+        registerTab.classList.remove('active');
+        loginForm.classList.add('active');
+        registerForm.classList.remove('active');
+    };
+    registerTab.onclick = function() {
+        registerTab.classList.add('active');
+        loginTab.classList.remove('active');
+        registerForm.classList.add('active');
+        loginForm.classList.remove('active');
+    };
+
+    // Remove error/success messages on tab switch
+    [loginTab, registerTab].forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.getElementById('loginMsg').style.display = 'none';
+            document.getElementById('registerMsg').style.display = 'none';
+        });
+    });
+</script>
+</body>
+</html>

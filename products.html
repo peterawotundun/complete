@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrRex Gadgets - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+     <script src="js/auth.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            
+            <div class="mobile-nav">
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="auth.html">Admin</a></li>
+                </ul>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="auth.html">Admin</a></li>
+            </ul>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="nav-icons">
+                <a href="wishlist.html" class="wishlist">
+                    <i class="far fa-heart"></i>
+                    <span id="wishlist-badge" class="badge">0</span>
+                </a>
+                <a href="checkout.html" class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-badge" class="badge">0</span>
+                </a>
+                <a href="auth.html" class="wishlist">
+                    <i class="far fa-user"></i>
+                </a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+     <main>
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">All Products</button>
+            <button class="tab-btn" data-category="phones">Phones</button>
+            <button class="tab-btn" data-category="laptops">Laptops</button>
+            <button class="tab-btn" data-category="smartwatches">SmartWatches</button>
+            <button class="tab-btn" data-category="accessories">Accessories</button>
+            <button class="tab-btn" data-category="headphones">Headphones</button>
+            <button class="tab-btn" data-category="gaming">Gaming</button>
+        </div>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label>Sort by:</label>
+                <select id="sortSelect">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Price Range:</label>
+                <div class="price-inputs">
+                    <input type="number" id="minPrice" placeholder="Min">
+                    <span>-</span>
+                    <input type="number" id="maxPrice" placeholder="Max">
+                    <button id="priceFilterBtn">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="productsGrid" class="products-grid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+
+        <div class="pagination">
+            <button id="prevPage" class="page-btn"><i class="fas fa-chevron-left"></i></button>
+            <div id="pageNumbers" class="page-numbers">
+                <!-- Page numbers will be dynamically added here -->
+            </div>
+            <button id="nextPage" class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+    <script src="js/products.js"></script>
+</body>
+</html>

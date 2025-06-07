@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrRex Gadgets - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/login.js"></script>
+    <script src="js/home-products.js"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://unpkg.com/lucide-web/dist/umd/lucide.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                 
+        <!-- Mobile navigation menu -->
+            <div class="mobile-nav">
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Explore</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="auth.html">Admin</a></li>
+                    <li><a href="#" id="logoutBtn">Sign Out</a></li>
+                </ul>
+            </div>
+       
+        <!--ddsktop-->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Explore</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="auth.html">Admin</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="What are you looking for?">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="nav-icons">
+                <a href="wishlist.html" class="wishlist">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="checkout.html" class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="auth.html" class="wishlist">
+                    <i class="far fa-user"></i>
+                </a>
+        <!-- Add hamburger menu button -->
+            <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+            </div>
+        </nav>
+    </header>
+<br/>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide active">
+            <!-- Banner Image -->
+            <img src="img/hero banner.jpg" alt="iPhone series" class="banner-image">
+            <img src="img/hero banner mobile.jpg" alt="iPhone series" class="mmmbanner-image">
+            <!-- Text Content & Button -->
+            <div class="slide-content">
+               <a href="products.html" class="shop-now">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <main>
+        <!-- Flash Sales Section -->
+        <section class="flash-sales">
+            <div class="section-header">
+                <div class="title-wrapper">
+                    <span class="indicator">Today's</span>
+                    <h2>Flash Sales</h2>
+                </div>
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span class="number">03</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="number">23</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="number">19</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="number">56</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="nav-btn prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="nav-btn next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <!-- DYNAMIC FLASH SALES PRODUCTS -->
+            <div id="flash-sales-products" class="products-slider"></div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="section-header">
+                <div class="title-wrapper">
+                    <span class="indicator">Categories</span>
+                    <h2>Browse By Category</h2>
+                </div>
+                <div class="navigation">
+                    <button class="nav-btn prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="nav-btn next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <a href="products.html" style="text-decoration: none; color: black;"><i class="fas fa-mobile-alt"></i></a>
+                    <span>Phones</span>
+                </div>
+                <div class="category-card">
+                    <a href="products.html" style="text-decoration: none; color: black;"><i class="fas fa-desktop"></i></a>
+                    <span>Laptops</span>
+                </div>
+                <div class="category-card">
+                    <a href="products.html" style="text-decoration: none; color: black;"><i class="fas fa-clock"></i></a>
+                    <span>SmartWatch</span>
+                </div>
+                <div class="category-card active">
+                    <a href="products.html" style="text-decoration: none; color: black;"><i class="fas fa-plug"></i></a>
+                    <span>Assessories</span>
+                </div>
+                <div class="category-card">
+                    <a href="products.html" style="text-decoration: none; color: black;"><i class="fas fa-headphones"></i></a>
+                    <span>Headphones</span>
+                </div>
+                <div class="category-card">
+                    <a href="products.html" style="text-decoration: none; color: black;"><i class="fas fa-gamepad"></i></a>
+                    <span>Gaming</span>
+                </div>
+            </div>
+        </section>
+<br/>
+<br/>
+        <!-- Best Selling Products Section -->
+        <section class="best-selling">
+            <div class="section-header">
+                <div class="title-wrapper">
+                    <span class="indicator">This Month</span>
+                    <h2>Best Selling Products</h2>
+                </div>
+                <a href="products.html"><button class="view-all">View All</button></a>
+            </div>
+            <!-- DYNAMIC BEST SELLING PRODUCTS -->
+            <div id="best-selling-products" class="products-slider"></div>
+        </section>
+    </main>
+
+<!-- Hero Section -->
+<section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+            <h1>Enhance Your<br>Internet Access</h1>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="number">23</span>
+                    <span class="label">DAYS</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">05</span>
+                    <span class="label">HRS</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">59</span>
+                    <span class="label">MINS</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">35</span>
+                    <span class="label">SECS</span>
+                </div>
+            </div>
+            <a href="products.html"><button class="buy-now">Buy Now!</button></a>
+        </div>
+        <div class="hero-image">
+            <img src="img/222.jpg" alt="JBL Speaker">
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products" id="products">
+    <div class="section-header">
+        <div class="header-text">
+            <span class="section-label">Our Products</span>
+            <h2>Explore Our Products</h2>
+        </div>
+        <div class="navigation">
+            <button class="nav-btn prev">←</button>
+            <button class="nav-btn next">→</button>
+        </div>
+    </div>
+
+    <!-- DYNAMIC EXPLORE PRODUCTS -->
+    <div id="explore-products" class="product-grid"></div>
+
+    <div class="view-all">
+        <a href="products.html"><button class="view-all-btn">View All Products</button></a>
+    </div>
+</section>
+
+<!-- New Arrival Section -->
+<section class="new-arrival">
+    <div class="section-header">
+        <span class="section-label">Featured</span>
+        <h2>New Arrival</h2>
+    </div>
+    
+    <div class="arrival-grid">
+        <div class="arrival-main">
+            <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&q=80" alt="PlayStation 5">
+            <div class="arrival-content">
+                <h3>PlayStation 5</h3>
+                <p>Black and White version of the PS5 coming soon</p>
+                <a href="products.html"><button class="buy-now">Buy Now!</button></a>
+            </div>
+        </div>
+        <div class="arrival-secondary">
+            <div class="arrival-item women">
+                <img src="img/23.jpg" alt="Women's Collections">
+                <div class="arrival-content">
+                    <h3>JBL</h3>
+                    <p>JBL Exclusive Speaker</p>
+                    <a href="products.html"><button class="buy-now">Buy Now!</button></a>
+                </div>
+            </div>
+            <div class="arrival-row">
+                <div class="arrival-item speakers">
+                    <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&q=80" alt="Speakers">
+                    <div class="arrival-content">
+                        <h3>Speakers</h3>
+                        <p>Amazon wireless speakers</p>
+                        <a href="products.html"><button class="buy-now">Buy Now!</button></a>
+                    </div>
+                </div>
+                <div class="arrival-item perfume">
+                    <img src="img/21.jpg" alt="Perfume">
+                    <div class="arrival-content">
+                        <h3>iPhone 11</h3>
+                        <p>Apple iPhone 11 Open-box</p>
+                        <a href="products.html"><button class="buy-now">Buy Now!</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- customner support  -->
+<section id="contact" class="contact">
+        <div class="form-header">
+            <h2>Contact Us</h2>
+            <p></p>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="name">Complete Name</label>
+                <input placeholder="Your Name" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input placeholder="youremail@gmail.com" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Message</label>
+                <input placeholder="How can we help you?" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Upload Screenshot (optional)</label>
+                <input type="file" id="upload" name="email">
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+</section>
+<!-- Features Section -->
+<section class="features">
+    <div class="feature">
+        <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+        <h3>FREE AND FAST DELIVERY</h3>
+        <p>Free delivery for all orders over ₦150000</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3>24/7 CUSTOMER SERVICE</h3>
+        <p>Friendly 24/7 customer support</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+        <h3>MONEY BACK GUARANTEE</h3>
+        <p>We return money within 7 days</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Exclusive</h3>
+            <div class="subscribe">
+                <h4>Subscribe</h4>
+                <p>Get 10% off your first order</p>
+                <div class="email-input">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Shop Venue</h3>
+            <p>Shop 1 <br> Shop 20, Marnona Plaza, Gbeganu Junction<br> minna 920101, Niger state</p>
+            <br><p>Shop 2 <br> Bomas Supermarket, Old Airport Road, Fish Roundabout<br> minna, Niger state</p>
+            <br><p>support@drrexgadgets.com.ng</p>
+            <p>+234 814 505 5406</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Account</h3>
+            <ul>
+                <li><a href="index.html">My Account</a></li>
+                <li><a href="auth.html">Login / Register</a></li>
+                <li><a href="checkout.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Link</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#contact">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+ <!-- Customer Service Icon -->
+ <a href="https://t.me/drrexgadgets" target="_blank" class="customer-service">
+    <img src="img/support.png" alt="Chat with us">
+</a>
+</footer>
+</body>
+</html>
