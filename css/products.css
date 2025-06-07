@@ -1,0 +1,216 @@
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    margin: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-group label {
+    font-weight: 500;
+}
+
+.filter-group select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price-inputs input {
+    width: 100px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+#priceFilterBtn {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-number.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .category-tabs {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 1rem;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .price-inputs {
+        flex-wrap: wrap;
+    }
+
+    .products-grid {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
+
+.badge {
+    display: none; /* hidden until items exist */
+    background-color: #043D79;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+.cart-icon, .wishlist-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+
+/* Info Box Notification */
+.info-box {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background: #043D79;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(4, 61, 121, 0.18);
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 0.4s, top 0.4s;
+    font-size: 1rem;
+    pointer-events: none;
+}
+.info-box.visible {
+    opacity: 1;
+    top: 70px;
+}
+
+.info-box.success {
+    background: #043D79;
+}
+.info-box.error {
+    background: #dc3545;
+}
+
+/* Wishlist heart icon (override for blue if .fas and color applied) */
+.wishlist-btn .fas {
+    color: #043D79 !important;
+}
