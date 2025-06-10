@@ -1633,3 +1633,11 @@ footer {
 }
 .info-box.success { background: #043D79; }
 .info-box.error { background: #dc3545; }
+
+
+.price .original {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 8px;
+    font-size: 0.98em;
+}
